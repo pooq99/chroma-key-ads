@@ -32,15 +32,15 @@ let processor = {
           let l = frame.data.length / 4;
 
       for (let i = 0; i < l; i++) {
-        let r = frame.data[i * 4 + 0];
+        let r = frame.data[i * 4];
         let g = frame.data[i * 4 + 1];
         let b = frame.data[i * 4 + 2];
 
         let tr = 68;
         let tg = 251;
-        let tb = 0;
+
         //let greyColor = 150
-        if (b === tb) //  80 && b < 143) //
+        if (g > 250 && r > 65 && b < 5) //  80 && b < 143) //
           frame.data[i * 4 + 3] = 0;
       }
       this.ctx2.putImageData(frame, 0, 0);
