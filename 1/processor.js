@@ -36,11 +36,11 @@ let processor = {
         let g = frame.data[i * 4 + 1];
         let b = frame.data[i * 4 + 2];
 
-        let tr = 0;
-        let tg = 177;
-        let tb = 64;
+        let tr = 66;
+        let tg = 251;
+        let tb = 0;
         //let greyColor = 150
-        if (r === tr && g === tg && b === tb) //  80 && b < 143) //
+        if (r === 0) //  80 && b < 143) //
           frame.data[i * 4 + 3] = 0;
       }
       this.ctx2.putImageData(frame, 0, 0);
