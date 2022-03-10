@@ -42,7 +42,7 @@ let processor = {
         //let greyColor = 150
         if (g === tg && r === tr && b === tb) //  80 && b < 143) //
           frame.data[i * 4 + 3] = 0;
-      }ß
+      }
       this.ctx2.putImageData(frame, 0, 0);
       this.ctx3.putImageData(frame, 0, 0);
       return;
