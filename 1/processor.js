@@ -40,7 +40,7 @@ let processor = {
         let tg = 251;
         let tb = 0;
         //let greyColor = 150
-        if (r === 0) //  80 && b < 143) //
+        if (r <= 160 && g > 150 && b <= 160)
           frame.data[i * 4 + 3] = 0;
       }
       this.ctx2.putImageData(frame, 0, 0);
