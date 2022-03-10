@@ -10,6 +10,10 @@
         background-image: url(media/jk_kakao.png);
         background-repeat: repeat;
       }
+      #c3 {
+        background-image: url(media/bg2.png);
+        background-repeat: repeat;
+      }
       div {
         float: left;
         /*border :1px solid #444444;*/
@@ -23,13 +27,15 @@
   <body>
     <div style = "width:100%">
       <h1>Original Video (재생해보세요)</h1>
-        <video id="video" src="media/video.mp4" controls="true" loop="true" style="height: 640px;"/>
+        <video id="video" src="media/video.mp4" controls="true" loop="true" style="height: 500px;"/>
       <br /><br /><br /><br /><br />
     </div>
     <div style = "width:100%">
+      <canvas id="c1" width="1920" height="1080" hidden="true"></canvas> <br />
       <h1>Chromakey AD Video</h1>
       <canvas id="c2" width="1920" height="1080"></canvas>
       <br /><br /><br /><br />
+      <canvas id="c3" width="1920" height="1080" hidden="true"></canvas>
     </div>
   <script type="text/javascript" src="processor.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
